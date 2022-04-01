@@ -3,7 +3,12 @@
 </script>
 
 <script>
-	import Counter from '$lib/Counter.svelte';
+	import Author from "$lib/Author.svelte";
+	import ImageGrid from "$lib/ImageGrid.svelte"
+	import DATA from "../data/data.js";
+
+	import Content from '$lib/Content.svelte';
+  	import Modal from 'svelte-simple-modal';
 </script>
 
 <svelte:head>
@@ -11,49 +16,27 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
+	<Modal><Content /></Modal>
+
+	<div class="container">
+		<div class="row">
+			<div class="container">
+				<Author 
+					image={DATA.AUTHOR.IMAGE} 
+					alt={DATA.AUTHOR.ALT} 
+					description={DATA.AUTHOR.DESCRIPTION}
+				/>
+			</div>
 		</div>
 
-		to your new<br />SvelteKit app
-	</h1>
+		<div class="row">
 
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
+			<ImageGrid
+				images={DATA.IMAGES}
+			/>
+		</div>
+	</div>
 </section>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
 </style>
