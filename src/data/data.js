@@ -2,10 +2,10 @@ const HEADER = "Galeria Franciszka Łopuszańskiego";
 
 const NAVBAR_DATA = [
     { id: 1, url: "/", label: "Strona główna" },
-    { id: 2, url: "#services", label: "Tosia L." },
-    { id: 3, url: "/", label: "Franek Ł.", active: true },
-    { id: 4, url: "#testimonials", label: "Ala B." },
-    { id: 5, url: "#footer", label: "Jacek J." }
+    { id: 2, url: "https://sites.google.com/lo1.gliwice.pl/galeriarzeczybliskich-tosia/tosia-l", label: "Tosia L." },
+    { id: 3, url: "https://galeria-strona-glowna.glitch.me/", label: "Franek Ł.", active: true },
+    { id: 4, url: "https://sites.google.com/lo1.gliwice.pl/galeriarzeczybliskich-ala/ala-b", label: "Ala B." },
+    { id: 5, url: "https://galeria-jacka.glitch.me/#", label: "Jacek J." }
 ];
 
 const AUTHOR = {
